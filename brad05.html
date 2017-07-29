@@ -65,15 +65,27 @@
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 &&
                 xmlhttp.status == 200) {
-//                console.log(xmlhttp.responseText);
-//                console.log("-----");
                 var xml = xmlhttp.responseXML;
-                var to = xml.getElementsByTagName("to");
-                console.log(to[0].innerHTML);
-                console.log(to[1].innerHTML);
-                console.log(to[2].innerHTML);
+                var notes = xml.getElementsByTagName('note');
+                for (var i=0; i<notes.length; i++){
+                    var note = notes[i];
+                    var titleObj = note.getElementsByTagName('title');
+                    var title = titleObj[0].innerHTML
+                    var priceObj = note.getElementsByTagName('price');
+                    var price = priceObj[0].innerHTML
+
+                    var authorsObj = note.getElementsByTagName('authors');
+                    var authors= authorsObj[0];
+                    var names = authors.getElementsByTagName('name');
+                    for (var j=0; j<names.length; j++){
+                        var nameObj = names[j];
+                        console.log(nameObj.innerHTML);
+                    }
 
 
+
+
+                }
             }
         };
         xmlhttp.send();
