@@ -81,7 +81,6 @@
                     var names = authors.getElementsByTagName('name');
                     for (var j=0; j<names.length; j++){
                         var nameObj = names[j];
-                        console.log(nameObj.innerHTML);
 
                         var tr = table.insertRow(-1);
                         if (j==0){
@@ -118,3 +117,34 @@
     </tr>
 
 </table>
+<hr />
+<table border="1" width="100%">
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Tel.</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Note1</td>
+        <td>brad1</td>
+        <td rowspan="2">100</td>
+    </tr>
+    <tr>
+        <td>brad2</td>
+    </tr>
+
+    <tr>
+        <td rowspan="3">Note3</td>
+        <td>brad3</td>
+        <td rowspan="3">200</td>
+    </tr>
+    <tr>
+        <td>brad4</td>
+    </tr>
+    <tr>
+        <td>brad5</td>
+    </tr>
+
+
+</table>
+
