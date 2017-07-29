@@ -11,7 +11,8 @@
     function test() {
         if (!xmlhttp) return;
 
-        xmlhttp.open("GET","test1.txt",true);
+        xmlhttp.open("GET","test.php",true);
+        xmlhttp.setRequestHeader("User_Agent","Brad");
         xmlhttp.send();
     }
 
