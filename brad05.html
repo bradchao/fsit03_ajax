@@ -65,9 +65,15 @@
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 &&
                 xmlhttp.status == 200) {
-                console.log(xmlhttp.responseText);
-                console.log("-----");
-                console.log(xmlhttp.responseXML);
+//                console.log(xmlhttp.responseText);
+//                console.log("-----");
+                var xml = xmlhttp.responseXML;
+                var to = xml.getElementsByTagName("to");
+                console.log(to[0].innerHTML);
+                console.log(to[1].innerHTML);
+                console.log(to[2].innerHTML);
+
+
             }
         };
         xmlhttp.send();
