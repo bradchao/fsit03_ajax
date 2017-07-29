@@ -1,6 +1,6 @@
 <?php
-    $x = $_GET['x'];
-    $y = $_GET['y'];
+    $x = $_POST['x'];
+    $y = $_POST['y'];
     $result = $x + $y;
     echo $result;
 ?>
